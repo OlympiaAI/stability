@@ -4,11 +4,11 @@ require_relative "stability/http"
 require_relative "stability/client"
 require_relative "stability/version"
 
-module Stability
+module Stability # rubocop:disable Style/Documentation
   class Error < StandardError; end
   class ConfigurationError < Error; end
 
-  class Configuration
+  class Configuration # rubocop:disable Style/Documentation
     attr_writer :api_key
     attr_accessor :api_version, :extra_headers, :faraday_config, :log_errors, :request_timeout, :uri_base
 

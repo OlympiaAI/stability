@@ -8,7 +8,7 @@ require_relative "http"
 module Stability
   class ServerError < StandardError; end
 
-  class Client
+  class Client # rubocop:disable Style/Documentation
     include Stability::HTTP
 
     # Initializes the client with optional configurations.

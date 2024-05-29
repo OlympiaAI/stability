@@ -5,7 +5,6 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in stability.gemspec
 gemspec
 
-
 group :development do
   gem "dotenv", ">= 2"
   gem "pry", ">= 0.14"

@@ -4,7 +4,7 @@ require "faraday"
 require "faraday/multipart"
 
 module Stability
-  module HTTP
+  module HTTP # rubocop:disable Style/Documentation
     def get(path:)
       conn.get(uri(path:)) do |req|
         req.headers = headers

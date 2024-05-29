@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-require 'base64'
+
+require "base64"
 
 RSpec.describe Stability do
   it "has a version number" do
@@ -39,7 +40,7 @@ RSpec.describe Stability do
         expect(response["image"]).to be_a(String)
         expect(response["finish_reason"]).to eq("SUCCESS")
 
-        unless ENV['CI']
+        unless ENV["CI"]
           # Decode the base64 image and save it to a specific file in /tmp
           image_data = Base64.decode64(response["image"])
           file_path = "/tmp/core_generated_image.png"
@@ -70,7 +71,7 @@ RSpec.describe Stability do
         expect(response["finish_reason"]).to eq("SUCCESS")
 
         # Decode the base64 image and save it to a specific file in /tmp
-        unless ENV['CI']
+        unless ENV["CI"]
           image_data = Base64.decode64(response["image"])
           file_path = "/tmp/sd3_generated_image.png"
           File.open(file_path, "wb") do |file|
@@ -101,7 +102,7 @@ RSpec.describe Stability do
           expect(response["finish_reason"]).to eq("SUCCESS")
 
           # Decode the base64 image and save it to a specific file in /tmp
-          unless ENV['CI']
+          unless ENV["CI"]
             image_data = Base64.decode64(response["image"])
             file_path = "/tmp/sd3_generated_image-to-image.png"
             File.open(file_path, "wb") do |file|
