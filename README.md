@@ -117,8 +117,6 @@ rescue Stability::RateLimitError => e
 end
 ```
 
-These instructions should help users get started with the Stability SDK and understand how to use its core functionalities.
-
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
